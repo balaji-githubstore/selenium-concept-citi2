@@ -1,6 +1,7 @@
 package com.citi.basics;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,7 +16,9 @@ public class Demo2FBLogin {
 		driver.get("https://www.facebook.com/");
 		
 		
-		
+		Dimension dim= driver.findElement(By.id("email")).getSize();
+		System.out.println(dim.width);
+		System.out.println(dim.height);
 		
 //		By loc= By.id("email");
 //		WebElement ele= driver.findElement(loc);
